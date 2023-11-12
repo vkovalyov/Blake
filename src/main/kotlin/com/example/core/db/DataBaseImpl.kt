@@ -11,13 +11,14 @@ import org.litote.kmongo.coroutine.CoroutineDatabase
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 
+const val mongoConnection : String = "";
 class DataBaseImpl(private val dataBaseName: String) : Database {
 
     override val dbName: String
         get() = dataBaseName
 
     override val mongoClient: CoroutineClient
-        get() = KMongo.createClient(connectionString = "mongodb+srv://codex:)S%3Bpv8fB_%3DS%3DVLV@cluster0.z2jbbzj.mongodb.net/").coroutine
+        get() = KMongo.createClient(connectionString = mongoConnection).coroutine
 
     override val database: CoroutineDatabase
         get() = mongoClient.getDatabase(dbName)
