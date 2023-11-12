@@ -41,3 +41,4 @@ build
 !.idea/codeStyles/*
 !.idea/icon.png
 /build/
+/.gradle/
