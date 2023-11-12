@@ -22,12 +22,24 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm")
+
+    implementation("io.insert-koin:koin-ktor:3.5.1")
+    implementation("io.insert-koin:koin-logger-slf4j:3.0.1-beta-1")
+    implementation("org.litote.kmongo:kmongo-coroutine:4.11.0")
+    ///implementation("io.ktor:ktor-server-core-jvm")
+    implementation("io.ktor:ktor-server-core:$ktor_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+    implementation("io.ktor:ktor-gson:1.6.7")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
 }
