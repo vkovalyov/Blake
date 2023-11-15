@@ -40,11 +40,4 @@ class DataBaseImpl(private val dataBaseName: String) : Database {
 
     override val placeCollection: CoroutineCollection<Place>
         get() = database.getCollection()
-
-
-//    override val menuCollection: CoroutineCollection<MenuItem>
-//        get() = database.getCollection()
-//
-//    override val orderCollection: CoroutineCollection<Order>
-//        get() = database.getCollection()
 }

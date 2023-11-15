@@ -3,6 +3,7 @@ package com.example.feature.region.service
 import com.example.feature.region.models.Region
 import com.example.feature.region.models.RegionCreate
 import com.example.feature.region.models.RegionResponse
+import com.example.feature.region.models.RegionsResponse
 
 
 interface RegionService {
@@ -14,5 +15,9 @@ interface RegionService {
     suspend fun delete(regionId: String): Boolean?
 
     suspend fun getById(regionId: String): RegionResponse?
+
+    suspend fun getAll(page: Int, limit: Int): RegionsResponse?
+
+    suspend fun findByName(name: String): RegionsResponse?
 
 }
